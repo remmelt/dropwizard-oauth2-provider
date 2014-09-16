@@ -1,0 +1,7 @@
+logging:
+  level: INFO
+
+allowedGrantTypes:
+  - password
+
+bearerRealm: oauth2-provider
