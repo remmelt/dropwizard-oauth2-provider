@@ -1,21 +1,11 @@
 package com.remmelt.examples.core;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
-import lombok.experimental.Wither;
 import org.joda.time.DateTime;
 
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
-@Getter
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode
-@Wither
 public class AccessToken {
 	@JsonProperty("access_token_id")
 	@NotNull
@@ -28,4 +18,39 @@ public class AccessToken {
 	@JsonProperty("last_access_utc")
 	@NotNull
 	private DateTime lastAccessUTC;
+
+	public AccessToken(UUID tokenId, Long userId, DateTime lastAccessUTC) {
+		this.accessTokenId = tokenId;
+		this.userId = userId;
+		this.lastAccessUTC = lastAccessUTC;
+	}
+
+	public AccessToken withLastAccessUTC(DateTime dateUTC) {
+		this.lastAccessUTC = dateUTC;
+		return this;
+	}
+
+	public UUID getAccessTokenId() {
+		return accessTokenId;
+	}
+
+	public void setAccessTokenId(UUID accessTokenId) {
+		this.accessTokenId = accessTokenId;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public DateTime getLastAccessUTC() {
+		return lastAccessUTC;
+	}
+
+	public void setLastAccessUTC(DateTime lastAccessUTC) {
+		this.lastAccessUTC = lastAccessUTC;
+	}
 }

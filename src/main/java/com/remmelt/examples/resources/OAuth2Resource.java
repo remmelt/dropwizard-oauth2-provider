@@ -33,7 +33,7 @@ public class OAuth2Resource {
 		this.accessTokenDAO = accessTokenDAO;
 		this.userDAO = userDAO;
 
-		log.info("Constructed OAuth2Resource with grant types {}", allowedGrantTypes);
+		//log.info("Constructed OAuth2Resource with grant types {}", allowedGrantTypes);
 	}
 
 	@POST
