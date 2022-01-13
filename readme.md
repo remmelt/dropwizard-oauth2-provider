@@ -1,8 +1,8 @@
-#Dropwizard OAuth2 provider
+# Dropwizard OAuth2 provider
 
 Example OAuth2 provider project implementing the Resource Owner Password Credentials Grant in Dropwizard.
 
-##Prerequisites
+## Prerequisites
 - Maven 3
 - JDK 8 (probably works with 7 as well)
 
